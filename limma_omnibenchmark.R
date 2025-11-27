@@ -67,8 +67,6 @@ output_df <- data.frame(
   Name = rownames(data),
   Effect.Size = results$logFC,
   P.Value = results$P.Value,
-  adj.P.Val = results$adj.P.Val,
-  Significant = results$adj.P.Val < 0.05
 )
 
 # Save results
@@ -77,4 +75,3 @@ write.csv(output_df, output_file, row.names=FALSE)
 
 cat("Results saved to:", output_file, "\n")
 cat("Total features:", nrow(output_df), "\n")
-cat("Significant (FDR < 0.05):", sum(output_df$Significant), "\n")
