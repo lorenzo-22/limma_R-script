@@ -66,7 +66,7 @@ results <- topTable(fit3, coef=1, adjust.method="BH", number=Inf, sort.by="none"
 output_df <- data.frame(
   Name = rownames(data),
   Effect.Size = results$logFC,
-  P.Value = results$P.Value,
+  P.Value = results$P.Value
 )
 
 # Save results
